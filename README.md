@@ -1,5 +1,5 @@
 # 💫 About Me:
- As a second-year student at Belgium Campus ITversity, I am pursuing a Bachelor of Computing degree specialising in Software Engineering. My academic pursuits are driven by a profound interest in technology, particularly in the field of Artificial Intelligence. My career goals revolve around achieving proficiency as an AI Engineer and utilizing my expertise to contribute to cutting-edge technological advancements. I am wholeheartedly enthusiastic about taking on challenges and fully committed to putting forth dedicated efforts to turn my ambitions into reality.
+As a third-year Bachelor of Computing student at Belgium Campus ITversity, specializing in Software Engineering, I bring a deep passion for technology and a strong focus on innovation. My academic journey is shaped by a growing interest in Artificial Intelligence and its practical integration into real-world systems. I aim to become a skilled AI Engineer, leveraging my knowledge to develop impactful, forward-thinking solutions. I thrive on challenges and approach each project with curiosity, precision, and a commitment to continuous growth—both as a developer and as a creative problem-solver.
 
 
 ## 🌐 Socials:
