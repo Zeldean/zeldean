@@ -1,5 +1,5 @@
 # 💫 About Me:
-As a third-year Bachelor of Computing student at Belgium Campus ITversity, specializing in Software Engineering, I bring a deep passion for technology and a strong focus on innovation. My academic journey is shaped by a growing interest in Artificial Intelligence and its practical integration into real-world systems. I aim to become a skilled AI Engineer, leveraging my knowledge to develop impactful, forward-thinking solutions. I thrive on challenges and approach each project with curiosity, precision, and a commitment to continuous growth—both as a developer and as a creative problem-solver.
+As a third-year Bachelor of Computing student at Belgium Campus ITversity, I’ve been diving deep into the world of machine learning, where logic meets creativity. My interest in ML stems from a passion for building smart systems that do something useful, whether it’s enhancing gameplay mechanics in my projects or optimising task tracking in my second brain setup. I’m working toward becoming an ML Engineer who not only understands the math behind the model but also knows how to embed it into practical, efficient systems. Whether I’m wrangling JSON, designing fantasy ecosystems, or training a model, I approach every task with curiosity, precision, and the mindset of a developer who wants things to work, not just look good on paper.
 
 
 ## 🌐 Socials:
