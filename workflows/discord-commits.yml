@@ -1,0 +1,30 @@
+name: Post commits to Discord
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    types: [opened, reopened, closed, merged]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Format message
+        id: fmt
+        run: |
+          REPO="${{ github.repository }}"
+          ACTOR="${{ github.actor }}"
+          BRANCH="${GITHUB_REF_NAME}"
+          COMMITS_URL="https://github.com/${REPO}/commits/${BRANCH}"
+          MSG="**${REPO}** pushed by **${ACTOR}** on **${BRANCH}**\n${COMMITS_URL}"
+          echo "msg<<EOF" >> $GITHUB_OUTPUT
+          echo -e "$MSG" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Send to Discord
+        uses: appleboy/discord-action@v1
+        with:
+          webhook_id: ${{ secrets.DISCORD_WEBHOOK_ID }}
+          webhook_token: ${{ secrets.DISCORD_WEBHOOK_TOKEN }}
+          message: ${{ steps.fmt.outputs.msg }}
