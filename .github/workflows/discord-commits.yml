@@ -1,10 +1,10 @@
 name: Post commits to Discord
 
 on:
-  push:
-    branches: ["**"]
-  pull_request:
-    types: [opened, reopened, closed, merged]
+  workflow_call:
+
+permissions:
+  contents: read
 
 jobs:
   notify:
@@ -27,4 +27,4 @@ jobs:
         with:
           webhook_id: ${{ secrets.DISCORD_WEBHOOK_ID }}
           webhook_token: ${{ secrets.DISCORD_WEBHOOK_TOKEN }}
-          message: "Repo ${{ github.repository }} pushed to ${{ github.ref_name }}"
+          message: ${{ steps.fmt.outputs.msg }}
