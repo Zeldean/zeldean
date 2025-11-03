@@ -10,21 +10,25 @@ jobs:
   notify:
     runs-on: ubuntu-latest
     steps:
-      - name: Format message
-        id: fmt
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Send formatted embed to Discord
         run: |
           REPO="${{ github.repository }}"
-          ACTOR="${{ github.actor }}"
           BRANCH="${GITHUB_REF_NAME}"
-          COMMITS_URL="https://github.com/${REPO}/commits/${BRANCH}"
-          MSG="**${REPO}** pushed by **${ACTOR}** on **${BRANCH}**\n${COMMITS_URL}"
-          echo "msg<<EOF" >> $GITHUB_OUTPUT
-          echo -e "$MSG" >> $GITHUB_OUTPUT
-          echo "EOF" >> $GITHUB_OUTPUT
+          ACTOR="${{ github.actor }}"
+          AVATAR="https://github.com/${ACTOR}.png"
+          COMMITS=$(git log -5 --pretty=format:'%h %s - %an' | head -5 | sed 's/\"/\\"/g')
+          COUNT=$(git rev-list --count HEAD)
+          DESCRIPTION=$(echo "$COMMITS" | awk '{print "`"$1"`", substr($0, index($0,$2))}' | sed 's/^/• /' | tr '\n' '\\n')
+          EMBED=$(jq -n \
+            --arg name "$ACTOR" \
+            --arg icon "$AVATAR" \
+            --arg title "[$REPO:$BRANCH] $COUNT new commits" \
+            --arg desc "$DESCRIPTION" \
+            '{embeds:[{author:{name:$name,icon_url:$icon},title:$title,description:$desc,color:5814783}]}')
 
-      - name: Send to Discord
-        uses: appleboy/discord-action@v1.2.0
-        with:
-          webhook_id: ${{ secrets.DISCORD_WEBHOOK_ID }}
-          webhook_token: ${{ secrets.DISCORD_WEBHOOK_TOKEN }}
-          message: ${{ steps.fmt.outputs.msg }}
+          curl -sS -H "Content-Type: application/json" \
+            -d "$EMBED" \
+            "https://discord.com/api/webhooks/${{ secrets.DISCORD_WEBHOOK_ID }}/${{ secrets.DISCORD_WEBHOOK_TOKEN }}"
