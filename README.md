@@ -1,7 +1,7 @@
 # 💫 About Me:
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/dean-van-zyl-971ab9253)
 [![Reddit](https://img.shields.io/badge/Reddit-%23FF4500.svg?logo=Reddit&logoColor=white)](https://reddit.com/user/Familiar_Bee9566)
-[![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?logo=YouTube&logoColor=white)](https://youtube.com/@zeldean)
+[![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?logo=YouTube&logoColor=white)](https://youtube.com/@zeldean-04)
 [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:deanvanzyl37@gmail.com) 
 
 I’m Dean van Zyl, a third-year Bachelor of Computing student at Belgium Campus iTversity, focusing on Software Engineering and Machine Learning. I enjoy working on practical projects, from building automation tools that save time to exploring smaller applications of machine learning in everyday tasks.<br>Right now, my main goal is to gain real-world experience and figure out where I want to specialize. Outside of coding, I’m interested in 3D printing for functional designs and creating self-sustaining ecosystems, like aquariums and reptile enclosures that run naturally with minimal intervention.
